@@ -40,43 +40,72 @@ font-size: 21px;
 
 
 
-.nosso{
-display: flex;
-justify-content: space-around;
-    
+.area-cursos{
+  padding: 10px;
 }
 
-.Técnicos{
-    background-color: aqua;
-    border: 2px solid rgb(17, 51, 17);
-    padding: 10px;
-      border-radius: 10px;
-      width: 250px;
-      height: 200px;
+.titulo{
+    background-color: rgb(46, 84, 151);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
-.Qualificação{
-    background-color: aqua;
-    border: 2px solid rgb(17, 51, 17);
-    padding: 10px;
-      border-radius: 10px;
-      width: 250px;
-      height: 200px;
+
+.titulo h1{
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
 }
-.livres{
-    background-color: aqua;
-    border: 2px solid rgb(17, 51, 17);
-    padding: 10px;
-      border-radius: 10px;
-      width: 250px;
-      height: 200px;
+
+.titulo p{
+    font-size: 20px;
 }
-.Cedesp {
-    background-color: aqua;
-    border: 2px solid rgb(17, 51, 17);
-    padding: 10px;
-      border-radius: 10px;
-      width: 250px;
-      height: 200px;
+.nosso{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+   
+}
+
+.tecnicos,
+.qualificacao,
+.livres,
+.cedesp{
+    width: 280px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+   
+
+}
+
+.tecnicos img,
+.qualificacao img,
+.livres img,
+.cedesp img{
+width: 250px;
+   border-radius: 10px;
+}
+
+.tecnicos h2,
+.qualificacao h2,
+.livres h2,
+.cedesp h2{
+    margin: 20px ;
+    color: #3152af;
+}
+
+.tecnicos button,
+.qualificacao button,
+.livres button,
+.cedesp button{
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #0f2c7a;
+    color: white;
+
+    border-radius: 5px;
 }
 
 
