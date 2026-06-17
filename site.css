@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu .logo{
+    width: 80px;
+    
+ 
+}
+.menu{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+  
+}
+.menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Times New Roman';
+   display: flex;
+   align-items: center;
+
+}
+.menu a:hover{
+color: rgb(34, 78, 158);
+font-size: 21px;
+
+}
+
+.inicio img{
+    width: 1280px;
+    border-radius: 5px;
+}
+
+
+
+
+.nosso{
+display: flex;
+justify-content: space-around;
+    
+}
+
+.Técnicos{
+    background-color: aqua;
+    border: 2px solid rgb(17, 51, 17);
+    padding: 10px;
+      border-radius: 10px;
+      width: 250px;
+      height: 200px;
+}
+.Qualificação{
+    background-color: aqua;
+    border: 2px solid rgb(17, 51, 17);
+    padding: 10px;
+      border-radius: 10px;
+      width: 250px;
+      height: 200px;
+}
+.livres{
+    background-color: aqua;
+    border: 2px solid rgb(17, 51, 17);
+    padding: 10px;
+      border-radius: 10px;
+      width: 250px;
+      height: 200px;
+}
+.Cedesp {
+    background-color: aqua;
+    border: 2px solid rgb(17, 51, 17);
+    padding: 10px;
+      border-radius: 10px;
+      width: 250px;
+      height: 200px;
+}
+
+
