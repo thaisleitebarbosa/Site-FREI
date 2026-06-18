@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+  box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .menu .logo{
     width: 80px;
@@ -109,3 +110,277 @@ width: 250px;
 }
 
 
+
+
+
+
+                                            /* SOPHIA*/
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:40px auto;
+}
+
+/* CARDS */
+
+.informacoes{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:220px;
+    min-height:200px;
+
+    background:white;
+    border-radius:15px;
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icone{
+    width:60px;
+    height:60px;
+
+    background:#002f87;
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:15px;
+}
+
+.icone i{
+    color:white;
+    font-size:25px;
+}
+
+.card h3{
+    color:#002f87;
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.card p{
+    margin-bottom:6px;
+    color:#333;
+    font-size:14px;
+    line-height:1.4;
+}
+
+.redes{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:10px;
+}
+
+.redes i{
+    color:#002f87;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.redes i:hover{
+    transform:scale(1.15);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1000px){
+
+    .informacoes{
+        justify-content:center;
+    }
+
+    .card{
+        width:45%;
+    }
+
+    .topo-contato h1{
+        font-size:50px;
+    }
+}
+
+@media(max-width:600px){
+
+    .card{
+        width:100%;
+    }
+
+    .topo-contato h1{
+        font-size:38px;
+    }
+
+    .topo-contato p{
+        font-size:18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NOSSA HISTÓRIA EM NÚMEROS */
+
+.numeros{
+    width:100%;
+    padding:70px 5%;
+    background:#f4f6fb;
+}
+
+.titulo-numeros{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.titulo-numeros h1{
+    font-size:50px;
+    color:#3152af;
+    margin-bottom:15px;
+}
+
+.titulo-numeros p{
+    font-size:20px;
+    color:#555;
+    line-height:1.6;
+}
+
+.cards-numeros{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card7{
+    width:220px;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card7:hover{
+    transform:translateY(-5px);
+}
+
+.icone-numero{
+    width:70px;
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+    background:#e9eefc;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.icone-numero i{
+    font-size:30px;
+    color:#3152af;
+}
+
+.card7 h5{
+    margin-top:20px;
+    font-size:36px;
+    color:#0f2c7a;
+}
+
+.linha-numero{
+    width:60px;
+    height:4px;
+    background:#3152af;
+    margin:15px auto;
+    border-radius:20px;
+}
+
+.card7 p{
+    font-size:16px;
+    color:#555;
+    line-height:1.5;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1000px){
+
+    .card-contato{
+        width:45%;
+    }
+
+    .titulo-numeros h1{
+        font-size:40px;
+    }
+}
+
+@media(max-width:600px){
+
+    .card-contato{
+        width:100%;
+    }
+
+    .card7{
+        width:100%;
+        max-width:320px;
+    }
+
+    .titulo-numeros h1{
+        font-size:32px;
+    }
+
+    .titulo-numeros p{
+        font-size:16px;
+    }
+}

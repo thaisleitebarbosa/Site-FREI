@@ -34,79 +34,7 @@ body{
     z-index:0;
 }
 
-/* Bolinhas */
 
-.bolinhas{
-    position:absolute;
-    top:230px;
-    left:60px;
-
-    display:grid;
-    grid-template-columns:repeat(4,15px);
-    gap:14px;
-
-    z-index:1;
-}
-
-.bolinhas span{
-    width:6px;
-    height:6px;
-    background:#b6c4dc;
-    border-radius:50%;
-}
-
-/* Linhas */
-
-.linhas{
-    position:absolute;
-    right:-150px;
-    top:-120px;
-
-    width:420px;
-    height:420px;
-
-    border:1px solid #d9e2ef;
-    border-radius:50%;
-}
-
-.linhas::before,
-.linhas::after{
-    content:"";
-    position:absolute;
-    border:1px solid #d9e2ef;
-    border-radius:50%;
-}
-
-.linhas::before{
-    inset:25px;
-}
-
-.linhas::after{
-    inset:50px;
-}
-
-/* Logo */
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    position:relative;
-    z-index:2;
-}
-
-.logo img{
-    width:120px;
-}
-
-.titulo-logo h2{
-    font-size:25px;
-    color:#08295d;
-    font-weight:700;
-    line-height:1.2;
-}
-
-/* TÃ­tulo */
 
 .titulo{
     text-align:center;
