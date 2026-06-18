@@ -180,6 +180,224 @@ um futuro melhor para nossa comunidade.
 
 
 
+ <div class="testimonial-container">
+        <h2 class="title">Depoimentos</h2>
+        
+        <div class="carousel-wrapper">
+            <!-- Botões de Navegação -->
+            <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+            <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+
+            <div class="carousel-track-container">
+                <div class="carousel-track" id="carouselTrack">
+                    
+                    <!-- Slide 1: Eloísa -->
+                    <div class="kartis">
+                        <div class="photo-container">
+                            <img src="eloisa.png" alt="Foto de Eloísa Rosa Pereira">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="quote-icon">“</div>
+                            <p class="text">Gostaria de agradecer ao Instituto pela oportunidade e por todo o aprendizado que tive durante o curso de Administração no ano de 2022. Foi uma experiência muito importante para minha formação pessoal e profissional, que abriu várias portas para mim. Inclusive, muitos conhecimentos que adquiri aqui continuam sendo desenvolvidos nos trabalhos e projetos da faculdade que curso atualmente. É muito gratificante voltar hoje para compartilhar um pouco dessa trajetória com os novos alunos.</p>
+                            <div class="divider"></div>
+                            <h4 class="author-name">Eloísa Rosa Pereira</h4>
+                            <p class="author-meta">Ex-aluna de Administração, 2022</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Júlia -->
+                    <div class="kartis">
+                        <div class="photo-container">
+                            <img src="julia.png" alt="Foto de Júlia Freitas da Mata">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="quote-icon">“</div>
+                            <p class="text">Fiz o curso em 2022 e hoje curso Ciências Contábeis no Senac. Apesar de não ter seguido na área do curso, o Frei me abriu muitas portas em relação a networking tanto com alunos quanto com professores, e eu me sinto imensamente grata por ter participado de um ambiente tão acolhedor. É uma experiência pra vida toda. Agradeço pela oportunidade de retornar com meu conhecimento adquirido com o passar dos anos e compartilhá-lo com os novos alunos.</p>
+                            <div class="divider"></div>
+                            <h4 class="author-name">Júlia Freitas da Mata</h4>
+                            <p class="author-meta">Ex-aluna de Comunicação Visual, 2022</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Brendow -->
+                    <div class="kartis">
+                        <div class="photo-container">
+                            <img src="brewdon.png" alt="Foto de Brendow Mesquita de Jesus">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="quote-icon">“</div>
+                            <p class="text">Fazer o curso de Administração foi muito importante para a minha formação. Aqui adquiri conhecimentos e experiências que me ajudaram a chegar mais preparado ao mercado de trabalho e à faculdade. Atualmente trabalho na área de projetos em uma multinacional, e tenho muito orgulho de ter iniciado minha trajetória aqui. Sou muito grato pela oportunidade de ter estudado na escola e recomendo aos alunos que aproveitem ao máximo cada aprendizado, pois o preparo faz toda a diferença no futuro.</p>
+                            <div class="divider"></div>
+                            <h4 class="author-name">Brendow Mesquita de Jesus</h4>
+                            <p class="author-meta">Curso de Administração, 2012</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Bruno -->
+                    <div class="kartis">
+                        <div class="photo-container">
+                            <img src="bruno.png" alt="Foto de Bruno de Oliveira">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="quote-icon">“</div>
+                            <p class="text">O Frei permitiu que eu descobrisse a área profissional que sou apaixonado até hoje. Agora sou professor de Informática no Instituto, e agradeço a oportunidade que recebi de lecionar aqui. Unindo tecnologia, educação e moral, podemos reorientar nosso ensejo em nos melhorar, e, consequentemente, melhorar a vida de nosso próximo.</p>
+                            <div class="divider"></div>
+                            <h4 class="author-name">Bruno de Oliveira</h4>
+                            <p class="author-meta">Cursos de Informática (2005) e Inglês (2006)</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Ricardo -->
+                    <div class="kartis">
+                        <div class="photo-container">
+                            <img src="rocardo.png" alt="Foto de Ricardo Hessel de Araújo">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="quote-icon">“</div>
+                            <p class="text">Estudar aqui foi um divisor de águas na minha vida. A escola não só me deu base técnica, mas contribuiu diretamente para a formação do profissional e do cidadão que sou hoje. Foi aqui que tive meu primeiro direcionamento e minha primeira oportunidade no mercado de trabalho, que marcou o início da minha trajetória. Hoje, como Diretor Executivo no BTG Pactual, deixo o recado: tenham paciência, foquem no processo e estejam sempre abertos a aprender. O crescimento vem com o tempo e com a capacidade de se adaptar às oportunidades.</p>
+                            <div class="divider"></div>
+                            <h4 class="author-name">Ricardo Hessel de Araújo</h4>
+                            <p class="author-meta">Ex-aluno de Informática, 2006</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicadores (Bolinhas) -->
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const slides = Array.from(track.children);
+        const nextButton = document.getElementById('nextBtn');
+        const prevButton = document.getElementById('prevBtn');
+        const dotsContainer = document.getElementById('carouselDots');
+        
+        let currentIndex = 0;
+
+        dotsContainer.innerHTML = '';
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if(index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => moveToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = Array.from(dotsContainer.children);
+
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                if(index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function moveToSlide(index) {
+            currentIndex = index;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < slides.length - 1) {
+                moveToSlide(currentIndex + 1);
+            } else {
+                moveToSlide(0);
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                moveToSlide(currentIndex - 1);
+            } else {
+                moveToSlide(slides.length - 1);
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class=" parceirosFooter">
+
+    <h2> Nossos Parceiros</h2>
+
+    <p class="parceirosDescricao">
+        Empresas e instituições que apoiam nossos projetos.
+    </p>
+
+    <div class="carrossel">
+        <div class="carrossel-track">
+
+            <div class="parceiroItem"><img alt="[PARCEIROS] UNISA" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_00ea2d04a4e24ad8bca86ba6abb4555e~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_00ea2d04a4e24ad8bca86ba6abb4555e~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="[PARCEIROS] ITALO" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="[PARCEIROS] MAPFRE" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_66531fb673a74384a6f69e3d93dfdd94~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_66531fb673a74384a6f69e3d93dfdd94~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="SERPRO" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_036a817eb9d6462286214477c0e7e1d8~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_036a817eb9d6462286214477c0e7e1d8~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="logo pwi" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_85554034eaf647fead95cd931764758d~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_85554034eaf647fead95cd931764758d~mv2.png"></div>
+            <div class="parceiroItem"><img alt="logo mwm" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_5a2d9a41f9884040b76a872234a6e7e0~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_5a2d9a41f9884040b76a872234a6e7e0~mv2.png"></div>
+            <div class="parceiroItem"><img alt="logo rei do pallet" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_c45324272b1d49258371a7191ad11b11~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_c45324272b1d49258371a7191ad11b11~mv2.png"></div>
+            <div class="parceiroItem"><img alt="[PARCEIROS] ITALO" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="CM COMANDOS" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_fa8e4c66fc63434b8660701061780df7~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_fa8e4c66fc63434b8660701061780df7~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="PREFEITURA DE SÃO PAULO" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_70f1f2cbbd6c4ce8958ccda9b06a834d~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_70f1f2cbbd6c4ce8958ccda9b06a834d~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="HELP TRANSPORTES" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_8bfd86437eee4481a0197dc63d67bdca~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_8bfd86437eee4481a0197dc63d67bdca~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="logo maracatu" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_a084f39206ac44148a2c2fc29507e8cd~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_a084f39206ac44148a2c2fc29507e8cd~mv2.png"></div>
+            <div class="parceiroItem"><img alt="[PARCEIROS] ITALO" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="OLYMP" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_8945f6ed581a4c80b9be846741563837~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_8945f6ed581a4c80b9be846741563837~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="logo aps" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_1c7aeddec9744f61b33bd37f2b56eb78~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_1c7aeddec9744f61b33bd37f2b56eb78~mv2.png"></div>
+
+           
+            <div class="parceiroItem"><img alt="[PARCEIROS] UNISA" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_00ea2d04a4e24ad8bca86ba6abb4555e~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_00ea2d04a4e24ad8bca86ba6abb4555e~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="[PARCEIROS] ITALO" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="[PARCEIROS] MAPFRE" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_66531fb673a74384a6f69e3d93dfdd94~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_66531fb673a74384a6f69e3d93dfdd94~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="SERPRO" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_036a817eb9d6462286214477c0e7e1d8~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_036a817eb9d6462286214477c0e7e1d8~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="logo pwi" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_85554034eaf647fead95cd931764758d~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_85554034eaf647fead95cd931764758d~mv2.png"></div>
+            <div class="parceiroItem"><img alt="logo mwm" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_5a2d9a41f9884040b76a872234a6e7e0~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_5a2d9a41f9884040b76a872234a6e7e0~mv2.png"></div>
+              <div class="parceiroItem"><img alt="logo rei do pallet" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_c45324272b1d49258371a7191ad11b11~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_c45324272b1d49258371a7191ad11b11~mv2.png"></div>
+            <div class="parceiroItem"><img alt="[PARCEIROS] ITALO" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_e1cb1d67f3c342799cf590cbd5feb402~mv2.jpg"></div>
+             <div class="parceiroItem"><img alt="CM COMANDOS" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_fa8e4c66fc63434b8660701061780df7~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_fa8e4c66fc63434b8660701061780df7~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="PREFEITURA DE SÃO PAULO" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_70f1f2cbbd6c4ce8958ccda9b06a834d~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_70f1f2cbbd6c4ce8958ccda9b06a834d~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="HELP TRANSPORTES" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_8bfd86437eee4481a0197dc63d67bdca~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_8bfd86437eee4481a0197dc63d67bdca~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="logo maracatu" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_a084f39206ac44148a2c2fc29507e8cd~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_a084f39206ac44148a2c2fc29507e8cd~mv2.png"></div>
+            <div class="parceiroItem"><img src="img/viacao-grajau.png" alt="Viação Grajaú"></div>
+            <div class="parceiroItem"><img alt="OLYMP" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_8945f6ed581a4c80b9be846741563837~mv2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5b91ad_8945f6ed581a4c80b9be846741563837~mv2.jpg"></div>
+            <div class="parceiroItem"><img alt="logo aps" data-ssr-src-done="true" fetchpriority="high" src="https://static.wixstatic.com/media/5b91ad_1c7aeddec9744f61b33bd37f2b56eb78~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5b91ad_1c7aeddec9744f61b33bd37f2b56eb78~mv2.png" ></div>
+
+
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -278,6 +496,18 @@ um futuro melhor para nossa comunidade.
 
 
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
